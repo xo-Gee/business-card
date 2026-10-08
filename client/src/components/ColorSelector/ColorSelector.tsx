@@ -31,14 +31,12 @@ export const ColorSelector: React.FC<Props> = ({ state, onChange }) => {
   };
 
   return (
-    <div className="step-container color-selector">
-      <h2>3. 색상 선택</h2>
-      
-      <div className="color-box">
-        <h3>배경색 선택</h3>
+    <div className="color-selector">
+      <div className="common-form-group">
+        <h3 className="common-label">배경색 선택</h3>
         <div className="color-pickers">
-          <input type="color" value={state.frontBgColor} onChange={(e) => handleColorChange('frontBgColor', e.target.value)} title="전면 배경색" />
-          <input type="color" value={state.backBgColor} onChange={(e) => handleColorChange('backBgColor', e.target.value)} disabled={state.syncBgColors} title="후면 배경색" />
+          <input className="color-input" type="color" value={state.frontBgColor} onChange={(e) => handleColorChange('frontBgColor', e.target.value)} title="전면 배경색" />
+          <input className="color-input" type="color" value={state.backBgColor} onChange={(e) => handleColorChange('backBgColor', e.target.value)} disabled={state.syncBgColors} title="후면 배경색" />
         </div>
         <div className="sync-control">
           <label>
@@ -48,18 +46,34 @@ export const ColorSelector: React.FC<Props> = ({ state, onChange }) => {
         </div>
       </div>
 
-      <div className="color-box">
-        <h3>글자색 선택</h3>
-        <div className="text-color-selectors">
+      <div className="common-form-group">
+        <h3 className="common-label">글자색 선택</h3>
+        <div className="common-flex-row">
           <div className="text-color-group">
-            <span className="group-label">전면</span>
-            <label><input type="radio" name="frontText" checked={state.frontTextColor === '#000000'} onChange={() => handleColorChange('frontTextColor', '#000000')} /> 어두운 글자</label>
-            <label><input type="radio" name="frontText" checked={state.frontTextColor === '#ffffff'} onChange={() => handleColorChange('frontTextColor', '#ffffff')} /> 밝은 글자</label>
+            <span className="common-label">전면</span>
+            <div className="radio-options">
+              <label className="radio-label">
+                <input type="radio" name="frontText" checked={state.frontTextColor === '#000000'} onChange={() => handleColorChange('frontTextColor', '#000000')} /> 
+                <span>어두운 글자</span>
+              </label>
+              <label className="radio-label">
+                <input type="radio" name="frontText" checked={state.frontTextColor === '#ffffff'} onChange={() => handleColorChange('frontTextColor', '#ffffff')} /> 
+                <span>밝은 글자</span>
+              </label>
+            </div>
           </div>
           <div className="text-color-group">
-            <span className="group-label">후면</span>
-            <label><input type="radio" name="backText" checked={state.backTextColor === '#000000'} onChange={() => handleColorChange('backTextColor', '#000000')} disabled={state.syncBgColors} /> 어두운 글자</label>
-            <label><input type="radio" name="backText" checked={state.backTextColor === '#ffffff'} onChange={() => handleColorChange('backTextColor', '#ffffff')} disabled={state.syncBgColors} /> 밝은 글자</label>
+            <span className="common-label">후면</span>
+            <div className="radio-options">
+              <label className={`radio-label ${state.syncBgColors ? 'disabled' : ''}`}>
+                <input type="radio" name="backText" checked={state.backTextColor === '#000000'} onChange={() => handleColorChange('backTextColor', '#000000')} disabled={state.syncBgColors} /> 
+                <span>어두운 글자</span>
+              </label>
+              <label className={`radio-label ${state.syncBgColors ? 'disabled' : ''}`}>
+                <input type="radio" name="backText" checked={state.backTextColor === '#ffffff'} onChange={() => handleColorChange('backTextColor', '#ffffff')} disabled={state.syncBgColors} /> 
+                <span>밝은 글자</span>
+              </label>
+            </div>
           </div>
         </div>
       </div>

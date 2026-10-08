@@ -1,32 +1,56 @@
-/* 공통 컨테이너 (App.css에서 이동) */
-.step-container {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+/* --- 공통 레이아웃 --- */
+/* 가로 배치, 모바일(768px 이하)에서 세로 배치로 전환 */
+.common-flex-row {
+  display: flex;
+  gap: 1rem;
 }
-.step-container h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: #111827;
+@media (max-width: 768px) {
+  .common-flex-row {
+    flex-direction: column;
+  }
 }
 
-/* 공통 패널 (각 스텝의 폼 영역 박스 및 버튼) */
-.color-box, 
-.upload-box, 
-.template-options button {
-  padding: 1rem;
-  border-radius: 8px;
-  background: var(--surface-color);
-  border: 1px solid #e5e7eb;
+/* 2단 그리드, 모바일에서 1단으로 전환 */
+.common-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .common-grid-row {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* 공통 라벨 타이포그래피 */
-.form-group label, 
-.group-label, 
-.upload-box label {
+/* --- 공통 폼 요소 --- */
+/* 입력 그룹 (라벨 + 인풋 세로 배치) */
+.common-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 폼 라벨 타이포그래피 */
+.common-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #374151;
+  margin: 0;
+}
+
+/* 텍스트 인풋 스타일 */
+.common-input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.common-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
 }

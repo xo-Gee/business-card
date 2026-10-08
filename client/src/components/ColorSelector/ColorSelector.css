@@ -1,45 +1,74 @@
-.color-box {
-  margin-bottom: 1.5rem;
+.color-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.color-box h3 {
-  margin-top: 0;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
+
 .color-pickers {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
-.color-pickers input[type="color"] {
+
+.color-input {
   flex: 1;
   height: 40px;
-  border-radius: 6px;
+  width: 100%;
   padding: 0;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
-  width: 100%;
 }
+
+.color-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .sync-control {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
 }
-.text-color-selectors {
+
+.sync-control label {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #4b5563;
+  cursor: pointer;
 }
+
 .text-color-group {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
 }
-.text-color-group label {
+
+.radio-options {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.radio-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  font-size: 0.875rem;
   cursor: pointer;
   white-space: nowrap;
+  color: #374151;
+}
+
+.radio-label.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

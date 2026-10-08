@@ -1,11 +1,47 @@
-.upload-grid {
-  display: flex;
-  gap: 1rem;
-}
-.upload-box {
-  flex: 1;
+.logo-upload {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+}
+
+.file-input {
+  font-size: 0.875rem;
+  color: #6b7280;
+  padding: 0.5rem;
   border: 1px dashed #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-input::file-selector-button {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-input::file-selector-button:hover {
+  background: #e5e7eb;
+}
+
+.delete-btn {
+  margin-top: 0.5rem;
+  background: #fee2e2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+  border-color: #f87171;
 }

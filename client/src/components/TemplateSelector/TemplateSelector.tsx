@@ -8,17 +8,16 @@ interface Props {
 
 export const TemplateSelector: React.FC<Props> = ({ selectedId, onSelect }) => {
   return (
-    <div className="step-container template-selector">
-      <h2>1. 템플릿 선택</h2>
-      <div className="template-options">
-        <button className={selectedId === 1 ? 'active' : ''} onClick={() => onSelect(1)}>
-          가로 스탠다드 A
+    <div className="template-selector">
+      <div className="common-flex-row">
+        <button className={`template-btn ${selectedId === 1 ? 'active' : ''}`} onClick={() => onSelect(1)}>
+          가로 기본형
         </button>
-        <button className={selectedId === 2 ? 'active' : ''} onClick={() => onSelect(2)}>
-          가로 스탠다드 B
+        <button className={`template-btn ${selectedId === 2 ? 'active' : ''}`} onClick={() => onSelect(2)}>
+          가로 양면형
         </button>
-        <button className={selectedId === 3 ? 'active' : ''} onClick={() => onSelect(3)}>
-          세로 모던형
+        <button className={`template-btn ${selectedId === 3 ? 'active' : ''}`} onClick={() => onSelect(3)}>
+          세로형
         </button>
       </div>
     </div>

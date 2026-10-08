@@ -1,14 +1,28 @@
-.template-options {
+.template-selector {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
 }
-.template-options button {
+
+.template-btn {
   flex: 1;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4b5563;
   transition: all 0.2s;
 }
-.template-options button.active {
-  border-color: var(--primary-color);
-  background-color: #f3f4f6;
-  font-weight: bold;
+
+.template-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.template-btn.active {
+  border-color: #4f46e5;
+  background: #e0e7ff;
+  color: #4f46e5;
 }
