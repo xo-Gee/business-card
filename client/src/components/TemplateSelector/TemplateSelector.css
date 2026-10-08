@@ -1,0 +1,14 @@
+.template-options {
+  display: flex;
+  gap: 1rem;
+}
+.template-options button {
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.template-options button.active {
+  border-color: var(--primary-color);
+  background-color: #f3f4f6;
+  font-weight: bold;
+}

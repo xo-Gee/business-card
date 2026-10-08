@@ -1,0 +1,32 @@
+/* 공통 컨테이너 (App.css에서 이동) */
+.step-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.step-container h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+/* 공통 패널 (각 스텝의 폼 영역 박스 및 버튼) */
+.color-box, 
+.upload-box, 
+.template-options button {
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--surface-color);
+  border: 1px solid #e5e7eb;
+}
+
+/* 공통 라벨 타이포그래피 */
+.form-group label, 
+.group-label, 
+.upload-box label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}

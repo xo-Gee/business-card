@@ -1,0 +1,45 @@
+.color-box {
+  margin-bottom: 1.5rem;
+}
+.color-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.color-pickers {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.color-pickers input[type="color"] {
+  flex: 1;
+  height: 40px;
+  border-radius: 6px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.sync-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.text-color-selectors {
+  display: flex;
+  gap: 1rem;
+}
+.text-color-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.text-color-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
